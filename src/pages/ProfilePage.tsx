@@ -8,8 +8,8 @@ export default function ProfilePage() {
       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <div className="card-body">
           <div className="avatar flex justify-center">
-            <div className="w-24 rounded-full">
-              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            <div className="size-32 rounded-full">
+              <img src="https://randomuser.me/api/portraits/men/41.jpg" />
             </div>
           </div>
           <div className="form-control">

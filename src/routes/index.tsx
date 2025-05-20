@@ -7,6 +7,7 @@ import ProfilePage from "../pages/ProfilePage";
 import MainLayout from "../layouts/MainLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import NotFoundPage from "../pages/error/NotFoundPage";
+import ChatPage from "../pages/ChatPage";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Navigate to={"/home"} /> },
       { path: "/home", element: <HomePage /> },
+      { path: "/messages", element: <ChatPage /> },
       { path: "/profile", element: <ProfilePage /> },
     ],
   },
