@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import SignInPage from "../pages/auth/SignInPage";
 import SignUpPage from "../pages/auth/SignUpPage";
@@ -6,12 +6,14 @@ import ResetPasswordPage from "../pages/auth/ResetPasswordPage";
 import ProfilePage from "../pages/ProfilePage";
 import MainLayout from "../layouts/MainLayout";
 import AuthLayout from "../layouts/AuthLayout";
+import NotFoundPage from "../pages/error/NotFoundPage";
 
 const router = createBrowserRouter([
   {
     element: <MainLayout />,
     children: [
-      { path: "/", element: <HomePage /> },
+      { path: "/", element: <Navigate to={"/home"} /> },
+      { path: "/home", element: <HomePage /> },
       { path: "/profile", element: <ProfilePage /> },
     ],
   },
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
       { path: "/signup", element: <SignUpPage /> },
       { path: "/reset-password", element: <ResetPasswordPage /> },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
   },
 ]);
 

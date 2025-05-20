@@ -11,7 +11,7 @@ export default function SignInPage() {
         <button className="btn bg-white text-black border gap-2 font-light">
           <img
             className="w-5 h-5"
-            src="auth/google-logo.svg"
+            src="/auth/google-logo.svg"
             alt="Log in with Google"
           />
           Log in with Google
@@ -19,7 +19,7 @@ export default function SignInPage() {
         <button className="btn bg-white text-black border gap-2 font-light">
           <img
             className="w-5 h-5"
-            src="auth/facebook-logo.svg"
+            src="/auth/facebook-logo.svg"
             alt="Log in with Facebook"
           />
           Log in with Facebook

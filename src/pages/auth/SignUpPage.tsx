@@ -62,7 +62,7 @@ export default function SignUpPage() {
         <button className="btn bg-white text-black border gap-2 font-light">
           <img
             className="w-5 h-5"
-            src="auth/google-logo.svg"
+            src="/auth/google-logo.svg"
             alt="Sign up with Google"
           />
           Log in with Google
@@ -70,7 +70,7 @@ export default function SignUpPage() {
         <button className="btn bg-white text-black border gap-2 font-light">
           <img
             className="w-5 h-5"
-            src="auth/facebook-logo.svg"
+            src="/auth/facebook-logo.svg"
             alt="Sign up with Facebook"
           />
           Log in with Facebook
