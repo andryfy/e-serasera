@@ -1,29 +1,35 @@
 import { Link } from "react-router-dom";
+import Brand from "./Brand";
 
 const Navbar = () => {
   return (
-    <nav className="navbar bg-base-200 shadow-sm px-4">
+    <nav className="navbar bg-base-200 shadow-sm px-6 py-0">
       <div className="navbar-start">
-        <a className="text-xl">E-Serasera</a>
+        <Link to={"/"}>
+          <Brand />
+        </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu bg-base-200 lg:menu-horizontal rounded-box">
+      <div className="navbar-center flex h-full">
+        <ul
+          role="tablist"
+          className="menu bg-base-200 lg:menu-horizontal rounded-box h-full p-0 [&_li>*]:rounded-none [&_li>*]:h-full [&_li>*]:inline-flex [&_li>*]:content-center abs tabs-border"
+        >
           <li>
-            <Link to={"/"}>
+            <Link role="tab" className="tab tab-active" to={"/"}>
               <span className="material-symbols-outlined">family_home</span>
               Home
               <span className="badge badge-xs">99+</span>
             </Link>
           </li>
           <li>
-            <Link to={"/explorer"}>
+            <Link role="tab" className="tab" to={"/explorer"}>
               <span className="material-symbols-outlined">group_search</span>
               Explorer
               <span className="badge badge-xs badge-warning">NEW</span>
             </Link>
           </li>
           <li>
-            <Link to={"/messages"}>
+            <Link role="tab" className="tab" to={"/messages"}>
               <span className="material-symbols-outlined">mail</span>
               Messages
               <span className="badge badge-xs badge-primary">
